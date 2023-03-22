@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.h-loader {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.text-outline {
+  text-shadow: -2px -2px 0 #f2f2f2, 2px -2px 0 #f2f2f2, -2px 2px 0 #f2f2f2,
+    2px 2px 0 #f2f2f2;
+}
