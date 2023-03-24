@@ -5,7 +5,7 @@ const Logo: React.FC<{ className?: string; onClick?: () => void }> = ({
   onClick
 }) => {
   return (
-    <button id="logo" className="absolute top-0 left-0 z-30" onClick={onClick}>
+    <button id="logo" onClick={onClick}>
       <svg
         viewBox="0 0 369.23 381.86"
         xmlns="http://www.w3.org/2000/svg"

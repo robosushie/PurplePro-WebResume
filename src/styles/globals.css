@@ -11,7 +11,17 @@ body {
   overflow-x: hidden;
 }
 
-.text-outline {
+/* .text-outline {
   text-shadow: -2px -2px 0 #f2f2f2, 2px -2px 0 #f2f2f2, -2px 2px 0 #f2f2f2,
     2px 2px 0 #f2f2f2;
+} */
+
+.text-outline {
+  color: #00000000;
+  -webkit-text-stroke: 3px #f2f2f2;
+}
+
+.text-outline-sm {
+  color: #00000000;
+  -webkit-text-stroke: 2px #f2f2f2;
 }

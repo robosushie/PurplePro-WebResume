@@ -1,34 +1,16 @@
 'use client';
 import React, { useEffect } from 'react';
 
-import localFont from 'next/font/local';
-
-import {
-  Inter,
-  Lato,
-  Roboto_Condensed,
-  Oswald,
-  Raleway
-} from 'next/font/google';
-
-import {
-  Instagram,
-  Linkedin,
-  Twitter,
-  Github
-} from '@/components/common/socials';
+import { Raleway, Lato } from 'next/font/google';
 
 import { NavbarDesktop } from '@/components/common/navbar';
 import {
   HeroBackground,
   HeroDownArrow,
-  HeroMain,
-  HeroOverlayBackground
+  HeroMain
 } from '@/components/hero-section';
-import Logo from '@/components/common/logo';
 
-const lato = Lato({ subsets: ['latin'], weight: '400' });
-const roboto = Raleway({ subsets: ['latin'], weight: '400' });
+import hero_config from '@/content/hero-section';
 
 const HeroSection: React.FC<{}> = () => {
   useEffect(() => {
@@ -36,13 +18,14 @@ const HeroSection: React.FC<{}> = () => {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
   return (
-    <div className="relative w-screen h-loader lg:h-screen overflow-hidden bg-sd-background z-20">
-      {/* <Logo /> */}
+    <div
+      id="hero-section"
+      className="relative w-screen h-loader lg:h-screen overflow-hidden bg-sd-background"
+    >
       <NavbarDesktop />
-      <HeroBackground />
-      <HeroOverlayBackground />
+      <HeroBackground cover={hero_config.cover} />
       <HeroDownArrow />
-      <HeroMain />
+      <HeroMain config={hero_config} />
     </div>
   );
 };
