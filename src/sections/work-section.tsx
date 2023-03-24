@@ -1,10 +1,11 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Raleway, Lato } from 'next/font/google';
 import { InViewAnimateOnce } from '@/components/common/animations';
-
+import { AnimatePresence, motion } from 'framer-motion';
 import work_config from '@/content/work-section';
+import { isTouchDevice } from '@/utils/touch-device';
 
 const raleway = Raleway({ subsets: ['latin'], weight: '400' });
 const lato = Lato({ subsets: ['latin'], weight: '400' });
@@ -142,27 +143,83 @@ const ExperienceRow: React.FC<{
   );
 };
 
-const SkillsCard: React.FC<{ title: string; Icon: any }> = ({
+const SkillsCard: React.FC<{ title: string; Icon: any; description: any }> = ({
   title,
-  Icon
+  Icon,
+  description
 }) => {
+  const [inFocus, setInFocus] = useState(false);
   return (
-    <InViewAnimateOnce
-      transition={{ ease: 'easeIn', duration: 0.5 }}
-      visible={{ opacity: 1, y: 0 }}
-      hidden={{ opacity: 0, y: '20px' }}
-      amount={0.3}
-      className="relative w-[150px] aspect-square flex flex-col justify-center items-center m-8 p-8 border-sd-purple border-2 rounded-2xl"
+    <div
+      onClick={() => {
+        if (!isTouchDevice()) {
+          return;
+        }
+        setInFocus(!inFocus);
+      }}
+      onMouseOver={() => {
+        if (isTouchDevice()) {
+          return;
+        }
+        setInFocus(true);
+      }}
+      onMouseOut={() => {
+        if (isTouchDevice()) {
+          return;
+        }
+        setInFocus(false);
+      }}
     >
-      <div className="absolute w-[70px] -top-[35px] p-2 bg-sd-background">
-        <Icon className="fill-sd-white w-full" />
-      </div>
-      <div
-        className={`${raleway.className} font-bold text-sd-white text-center`}
+      <InViewAnimateOnce
+        transition={{ ease: 'easeIn', duration: 0.5 }}
+        visible={{ opacity: 1, y: 0 }}
+        hidden={{ opacity: 0, y: '20px' }}
+        amount={0.3}
+        className="relative w-[150px] aspect-square flex flex-col justify-center items-center m-8 p-8 border-sd-purple border-2 rounded-2xl"
       >
-        {title}
-      </div>
-    </InViewAnimateOnce>
+        <div className="absolute w-[70px] -top-[35px] p-2 bg-sd-background">
+          <Icon className="fill-sd-white w-full" />
+        </div>
+        <div
+          className={`${raleway.className} font-bold text-sd-white text-center`}
+        >
+          {title}
+        </div>
+        <AnimatePresence>
+          {inFocus && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.5 }}
+              transition={{ duration: 0.5 }}
+              className={`${raleway.className} flex flex-col absolute text-base w-[200%] sm:w-[150%] md:w-[300] lg:w-[400px] bottom-0 z-[100]`}
+            >
+              <div
+                className={` w-full rounded-xl bg-sd-white text-sd-black px-4 pb-4 ${
+                  isTouchDevice() ? `pt-2` : `pt-4`
+                } z-50`}
+              >
+                {isTouchDevice() && (
+                  <div className="w-full flex justify-end z-50 p-1">
+                    <svg
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-[24px] h-[24px] fill-sd-black"
+                    >
+                      <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                    </svg>
+                  </div>
+                )}
+                {description}
+              </div>
+              <div className="w-full flex justify-center items-center">
+                <div className="border-solid border-t-sd-white border-t-8 border-x-transparent border-x-8 border-b-0" />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </InViewAnimateOnce>
+    </div>
   );
 };
 
@@ -219,7 +276,12 @@ const WorkSection: React.FC<{}> = () => {
       <div className="w-full flex flex-wrap justify-center pt-20 lg:pt-24 pb-10">
         {work_config.skills.map((value, index) => {
           return (
-            <SkillsCard key={index} title={value.title} Icon={value.icon} />
+            <SkillsCard
+              key={index}
+              title={value.title}
+              Icon={value.icon}
+              description={value.description}
+            />
           );
         })}
       </div>

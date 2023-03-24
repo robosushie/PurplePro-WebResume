@@ -46,11 +46,36 @@ const work_config = {
     }
   ],
   skills: [
-    { icon: Puzzle, title: 'Quantative Analysis' },
-    { icon: Puzzle, title: 'Data Analysis' },
-    { icon: Puzzle, title: 'Machine Learning' },
-    { icon: Puzzle, title: 'Deep Learning' },
-    { icon: Puzzle, title: 'Natural Language Processing' }
+    {
+      icon: Puzzle,
+      title: 'Quantative Analysis',
+      description:
+        'Covariance, Pearson Correlation Coefficient, QQ Plot, Confidence Interval, Hypothesis Testing, Chisquare Test, Anova Test, Conditional Probability, Bayes Theorem, Distributions(Poission, Uniform, Binomial, Bernaulli), Vectors, Matrices, Matrix Multiplication, Dot Product, Eigen Vector and Eigen Values'
+    },
+    {
+      icon: Puzzle,
+      title: 'Data Analysis',
+      description:
+        'Handling missing data(numerical, categorical, indicators), standarization, normalization, feature encoding(ordinal encoding, one hot encoding, feature hashing), feature transformation(Log transformation, Box Cox transformation, Yeo Johnson transformation), feature selection(Chi-squared Feature Selection, Backward Feature Elimination, Dropping features using Pearson correlation coefficient), Handling multicollinearity.'
+    },
+    {
+      icon: Puzzle,
+      title: 'Machine Learning',
+      description:
+        'DBSCAN, Heirarchical Clustering, KMeans Clustering, Xgboost, Gradient Boosting, Adaboost, Random Forest, Decision Trees, K Nearest Neighbors, Naive Bayes, Support Vector Machines, Logistic Regression, Gradient Descent, Linear Regression, ML metrics(MAE(Mean Absolute Error), MSE(Mean squared Error), RSME(Root Mean Squared Error), R2 Score, Adjusted R2 Score), Regularization(Ridge regression, Lasso regression, ElasticNet regression), Model Tuning(GridSearchCV, RandomSearchCV, Hyperparameter Tuning)'
+    },
+    {
+      icon: Puzzle,
+      title: 'Deep Learning',
+      description:
+        'Forward propogation (Weight management, Bais structuring, Activation function), Backward propogation (Loss function, Cost function, Optimisers, Weight updation)'
+    },
+    {
+      icon: Puzzle,
+      title: 'Natural Language Processing',
+      description:
+        'N-gram Language Models, Speech tagging, Sequence labelling, LSTM Recurrent, Syntactic parsing, Semantic Analysis, IE, MT'
+    }
   ],
   libraries: [
     { logo: Sklearn, title: 'Scikit Learn, SKLearn' },

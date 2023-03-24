@@ -130,33 +130,35 @@ const MenuIcon: React.FC<{}> = () => {
           }}
         >
           <AnimatePresence>
-            <div className="w-full h-1/6 flex justify-start">
-              <motion.div
-                initial={{ rotate: 0 }}
-                animate={{
-                  rotate: inFocus ? -45 : 0,
-                  x: inFocus ? '-10%' : 0,
-                  y: inFocus ? '100%' : 0
-                }}
-                exit={{ rotate: 0 }}
-                transition={{ duration: 0.3 }}
-                className="w-2/3 full bg-sd-white rounded-full "
-              />
-            </div>
-            <div className="w-full h-1/6 bg-sd-white rounded-full" />
-            <div className="w-full h-1/6 flex justify-start">
-              <motion.div
-                initial={{ rotate: 0 }}
-                animate={{
-                  rotate: inFocus ? 45 : 0,
-                  x: inFocus ? '-10%' : 0,
-                  y: inFocus ? '-100%' : 0
-                }}
-                exit={{ rotate: 0 }}
-                transition={{ duration: 0.3 }}
-                className="w-2/3 h-full bg-sd-white rounded-full"
-              />
-            </div>
+            <React.Fragment>
+              <div className="w-full h-1/6 flex justify-start">
+                <motion.div
+                  initial={{ rotate: 0 }}
+                  animate={{
+                    rotate: inFocus ? -45 : 0,
+                    x: inFocus ? '-10%' : 0,
+                    y: inFocus ? '100%' : 0
+                  }}
+                  exit={{ rotate: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="w-2/3 full bg-sd-white rounded-full "
+                />
+              </div>
+              <div className="w-full h-1/6 bg-sd-white rounded-full" />
+              <div className="w-full h-1/6 flex justify-start">
+                <motion.div
+                  initial={{ rotate: 0 }}
+                  animate={{
+                    rotate: inFocus ? 45 : 0,
+                    x: inFocus ? '-10%' : 0,
+                    y: inFocus ? '-100%' : 0
+                  }}
+                  exit={{ rotate: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="w-2/3 h-full bg-sd-white rounded-full"
+                />
+              </div>
+            </React.Fragment>
           </AnimatePresence>
         </button>
       </div>

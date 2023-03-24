@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Raleway, Lato } from 'next/font/google';
 
 const raleway = Raleway({ subsets: ['latin'], weight: '400' });
@@ -9,6 +9,19 @@ import contact_config from '@/content/contact-section';
 import { InViewAnimateOnce } from '@/components/common/animations';
 
 const ContactForm: React.FC<{}> = () => {
+  useEffect(() => {
+    const scriptURL =
+      'https://script.google.com/macros/s/AKfycbzuC_INJKR4IIw2Vgb421foZVoiA2OlZL0RtT1rA6iSUjahuDWlRh21_ZFaFossvBAV/exec';
+    const forms: any = document.forms;
+    const form = forms['submit-to-google-sheet'];
+
+    form.addEventListener('submit', (e: any) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then((response) => alert('Response Submission: Success!'))
+        .catch((error) => alert('Response Submission: Failure!'));
+    });
+  }, []);
   return (
     <InViewAnimateOnce
       transition={{ ease: 'easeIn', duration: 0.5, delay: 0.3 }}
@@ -18,13 +31,16 @@ const ContactForm: React.FC<{}> = () => {
       className="w-full h-full flex justify-center items-center text-sd-white"
     >
       <div className="w-full sm:w-11/12 lg:w-4/5 xl:w-2/3 flex flex-col">
-        <form className="w-full bg-black bg-opacity-40 rounded-xl flex flex-col p-7 lg:p-12 space-y-4 border-sd-purple border-b-4">
+        <form
+          name="submit-to-google-sheet"
+          className="w-full bg-black bg-opacity-40 rounded-xl flex flex-col p-7 lg:p-12 space-y-4 border-sd-purple border-b-4"
+        >
           <label className={`${raleway.className} text-lg py-1 px-2`}>
             Enter Your Name
           </label>
           <input
             className={`${raleway.className} text-lg rounded-sm bg-white bg-opacity-10 py-1 px-2`}
-            id="clientname"
+            name="Name"
             type="text"
             placeholder="Your Name"
           />
@@ -33,8 +49,8 @@ const ContactForm: React.FC<{}> = () => {
           </label>
           <input
             className={`${raleway.className} text-lg rounded-sm bg-white bg-opacity-10 py-1 px-2`}
-            id="clientemail"
-            type="text"
+            name="Email"
+            type="email"
             placeholder="Email ID"
           />
           <label className={`${raleway.className} text-lg py-1 px-2`}>
@@ -43,10 +59,11 @@ const ContactForm: React.FC<{}> = () => {
           <textarea
             className={`${raleway.className} text-lg rounded-sm bg-white bg-opacity-10 py-1 px-2 `}
             rows={4}
-            id="clientmessage"
+            name="Message"
             placeholder="Message"
           />
           <button
+            type="submit"
             className={`${raleway.className} flex justify-center text-lg py-2 px-6 border-sd-white border-2 rounded-md hover:bg-sd-white hover:text-sd-black font-black`}
           >
             Submit
