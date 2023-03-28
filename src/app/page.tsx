@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import {
   AboutSection,
@@ -20,9 +21,14 @@ export default function Home() {
       <WorkSection />
       <ProjectSection />
       <ContactSection />
-      <div className="w-full bg-sd-black text-sd-white flex justify-center md:justify-end py-1 px-10 text-sm">
+      <button
+        className="w-full bg-sd-black text-sd-white flex justify-center md:justify-end py-1 px-10 text-sm"
+        onClick={() => {
+          window.open('https://github.com/robosushie', '_blank');
+        }}
+      >
         Designed and Developed By : Robosushie
-      </div>
+      </button>
     </React.Fragment>
   );
 }
