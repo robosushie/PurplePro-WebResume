@@ -28,7 +28,7 @@ const work_config = {
     },
     {
       image: ConstacloudLogo,
-      title: 'Data Analyst',
+      title: 'Data Science Consultant',
       company: 'Constacloud, Korba',
       dates: 'March 2020 - March 2022',
       content: [
