@@ -43,7 +43,7 @@ The src folder contains the source code for the web resume. The app subfolder co
 To download the repo, you can run the following command:
 
 ```bash
-git clone <url>
+git clone https://github.com/robosushie/PurplePro-WebResume.git
 ```
 
 After downloading the repo, you need to install the dependencies by running the following command:
