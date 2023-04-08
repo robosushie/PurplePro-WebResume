@@ -2,6 +2,8 @@
 
 PurplePro WebResume Template is a professional and elegant web resume template made using NextJS 13, TailwindCSS, and Framer Motion. The project structure is designed to make it easy to update the resume information and customize the template according to personal preferences.
 
+Demo Url : [PurplePro-WebResume](https://purple-pro-web-resume.vercel.app/)
+
 ## Project Structure
 
 The project structure follows the conventional NextJS structure with some modifications to make it easier to manage the content and styling of the web resume. The structure is as follows:
