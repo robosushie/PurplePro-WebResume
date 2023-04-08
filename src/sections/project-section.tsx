@@ -37,6 +37,10 @@ const ProjectCard: React.FC<{
       <div
         className="absolute w-[50px] right-2 border-sd-white border-2 top-0 aspect-square bg-sd-black rounded-full flex justify-center items-center p-2 hover:scale-110 cursor-pointer"
         onClick={() => {
+          if (project.github == null || project.github == '') {
+            alert('This is a demo project - no link embedded');
+            return;
+          }
           window.open(project.github, '_blank');
         }}
       >

@@ -1,4 +1,4 @@
-import SHD from '@/assets/Shreyansh_Dubey_About.jpg';
+import AboutPic from '@/assets/AboutPic1.png';
 
 import {
   Books,
@@ -11,11 +11,11 @@ import {
 } from '@/components/common/icons';
 
 const about_config = {
-  image: SHD,
-  quote: `"Appreciate everything, even the ordinary. Especially the ordinary. Keep drumming."`,
+  image: AboutPic,
+  quote: `"Embrace complexity, live simply, and wander endlessly."`,
   content: [
-    "I'm a data enthusiast who loves tackling problems by looking at them from multiple angles. Whether it's writing code or living my life, I strive to keep things simple yet intuitive.",
-    "When I'm not working, you can find me tending to my in-house garden or hitting the open road. And speaking of roads, I'm passionate about promoting road safety and working towards making our streets safer for everyone."
+    "I'm Caleb Dev, a data analyst and software developer with a knack for tackling complex problems. I'm passionate about freelancing, allowing me the flexibility to explore the world while working.",
+    "When I'm not coding or analyzing data, you can find me on the road, discovering new places and cultures, accompanied by my four-legged companions. My journey as a digital nomad has taught me to adapt quickly, think creatively, and appreciate the diverse perspectives that enrich my life and work."
   ],
   interests: [
     { icon: Coffee, details: 'Caffeine enthusiast' },

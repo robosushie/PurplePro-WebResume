@@ -1,5 +1,4 @@
-import ConstacloudLogo from '@/assets/logos/constacloud.png';
-import SHDLogo from '@/assets/logos/shd.png';
+import Logo from '@/assets/logos/logo.png';
 
 import { Puzzle } from '@/components/common/icons';
 
@@ -18,63 +17,63 @@ import Tensorflow from '@/assets/logos/tensorflow.png';
 const work_config = {
   experience: [
     {
-      image: ConstacloudLogo,
-      title: 'Data Science Intern',
-      company: 'Constacloud, Korba',
-      dates: 'January 2020 - March 2020',
+      image: Logo,
+      title: 'Data Analyst',
+      company: 'TechVoyagers',
+      dates: 'Aug 2018 - July 2020',
       content: [
-        'Responsibilities: - Connect with stake holder, gather requirement, relevant data, data Preparing and cleaning, Data analyzing and providing POC dashboard to stake holders using agile practices.'
+        'Utilized data analytics techniques to optimize processes and improve client satisfaction, leading to a 20% increase in revenue for the company.'
       ]
     },
     {
-      image: ConstacloudLogo,
-      title: 'Data Science Consultant',
-      company: 'Constacloud, Korba',
-      dates: 'March 2020 - March 2022',
+      image: Logo,
+      title: 'Software Developer',
+      company: 'CodeXplore',
+      dates: 'Aug 2020 - July 2022',
       content: [
-        'Worked closely with the design community to identify business needs, created a problem statement, & developed functional specifications to support software development in Python ecosystem.'
+        'Designed and implemented custom software solutions for diverse clientele, enhancing business productivity and streamlining operations.'
       ]
     },
     {
-      image: SHDLogo,
-      title: 'Data Science Mentor',
-      company: 'Freelance',
-      dates: 'November 2019 - Present',
+      image: Logo,
+      title: 'Freelance Consultant',
+      company: 'ByteMasters',
+      dates: 'Aug 2023 - Present',
       content: [
-        'Mentoring UG and PG students to understand data analysis for project purposes and taught Data Science for intrested individual who are actively looking for campus placements for the campuses like IIT-Bombay, NIT-Raipur etc.'
+        'Assisted businesses with data-driven decision making and software development, ensuring tailored solutions and long-term success.'
       ]
     }
   ],
   skills: [
     {
       icon: Puzzle,
-      title: 'Quantative Analysis',
+      title: 'Data Analysis',
       description:
-        'Covariance, Pearson Correlation Coefficient, QQ Plot, Confidence Interval, Hypothesis Testing, Chisquare Test, Anova Test, Conditional Probability, Bayes Theorem, Distributions(Poission, Uniform, Binomial, Bernaulli), Vectors, Matrices, Matrix Multiplication, Dot Product, Eigen Vector and Eigen Values'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
       icon: Puzzle,
-      title: 'Data Analysis',
+      title: 'Software Development',
       description:
-        'Handling missing data(numerical, categorical, indicators), standarization, normalization, feature encoding(ordinal encoding, one hot encoding, feature hashing), feature transformation(Log transformation, Box Cox transformation, Yeo Johnson transformation), feature selection(Chi-squared Feature Selection, Backward Feature Elimination, Dropping features using Pearson correlation coefficient), Handling multicollinearity.'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+      icon: Puzzle,
+      title: 'Problem Solving',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
       icon: Puzzle,
       title: 'Machine Learning',
       description:
-        'DBSCAN, Heirarchical Clustering, KMeans Clustering, Xgboost, Gradient Boosting, Adaboost, Random Forest, Decision Trees, K Nearest Neighbors, Naive Bayes, Support Vector Machines, Logistic Regression, Gradient Descent, Linear Regression, ML metrics(MAE(Mean Absolute Error), MSE(Mean squared Error), RSME(Root Mean Squared Error), R2 Score, Adjusted R2 Score), Regularization(Ridge regression, Lasso regression, ElasticNet regression), Model Tuning(GridSearchCV, RandomSearchCV, Hyperparameter Tuning)'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
       icon: Puzzle,
       title: 'Deep Learning',
       description:
-        'Forward propogation (Weight management, Bais structuring, Activation function), Backward propogation (Loss function, Cost function, Optimisers, Weight updation)'
-    },
-    {
-      icon: Puzzle,
-      title: 'Natural Language Processing',
-      description:
-        'N-gram Language Models, Speech tagging, Sequence labelling, LSTM Recurrent, Syntactic parsing, Semantic Analysis, IE, MT'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }
   ],
   libraries: [

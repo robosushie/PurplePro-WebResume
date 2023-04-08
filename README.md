@@ -1,38 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PurplePro WebResume Template
 
-## Getting Started
+PurplePro WebResume Template is a professional and elegant web resume template made using NextJS 13, TailwindCSS, and Framer Motion. The project structure is designed to make it easy to update the resume information and customize the template according to personal preferences.
 
-First, run the development server:
+## Project Structure
+
+The project structure follows the conventional NextJS structure with some modifications to make it easier to manage the content and styling of the web resume. The structure is as follows:
+
+```bash
+Project Root
+├── content
+│   ├── about-section
+│   ├── contact-section
+│   ├── hero-section
+│   ├── main-config
+│   ├── project-section
+│   └── work-section
+├── public
+│   └── logo.png
+└── src
+    ├── app
+    ├── assets
+    ├── components
+    ├── sections
+    ├── styles
+    └── utils
+```
+
+### Content
+
+All the content-related files are stored under the content folder. The about-section, contact-section, hero-section, main-config, project-section, and work-section subfolders contain the respective content files for each section. You can easily modify the content and update it to reflect your personal information.
+
+### Public
+
+The public folder contains the logo.png file, which is used as the logo on the web resume.
+
+### Src
+
+The src folder contains the source code for the web resume. The app subfolder contains the code for the main application. The assets subfolder contains the images and other assets used in the web resume. The components subfolder contains the reusable components used throughout the web resume. The sections subfolder contains the code for each section of the web resume. The styles subfolder contains the TailwindCSS configuration files and other CSS files used in the web resume. The utils subfolder contains utility functions used in the web resume.
+
+## How to Use
+
+To download the repo, you can run the following command:
+
+```bash
+git clone <url>
+```
+
+After downloading the repo, you need to install the dependencies by running the following command:
+
+```bash
+npm install
+```
+
+To run the web resume locally, you can use the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To build the web resume for deployment, you can use the following command:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Customization
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You can easily customize the web resume by modifying the content files under the content folder and updating the styles in the styles folder. You can also modify the code for the components and sections to add new features or change the layout of the web resume.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Credits
 
-## Learn More
+The PurplePro WebResume Template was created by Robosushie and is based on the NextJS 13, TailwindCSS, and Framer Motion frameworks.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License - see the LICENSE.md file for details.

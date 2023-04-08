@@ -1,17 +1,10 @@
 'use client';
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 import { motion } from 'framer-motion';
 
 import { Lato, Raleway } from 'next/font/google';
-import {
-  Github,
-  Instagram,
-  Linkedin,
-  Twitter
-} from '@/components/common/socials';
-import { Email } from '@/components/common/icons';
 
 const raleway = Raleway({ subsets: ['latin'], weight: '400' });
 const lato = Lato({ subsets: ['latin'], weight: '400' });
@@ -25,7 +18,7 @@ const ProfileImage: React.FC<{ profile: any }> = ({ profile }) => {
         duration: 0.5,
         ease: [0, 0.71, 0.2, 1.01]
       }}
-      className="relative h-2/3 aspect-square bg-sd-black rounded-full border-sd-purple border-[1px] overflow-hidden z-20"
+      className="relative h-2/3 aspect-square bg-sd-black rounded-full border-sd-white border-[2px] overflow-hidden z-20"
     >
       <Image
         src={profile.image}
@@ -59,6 +52,9 @@ const SocialIcon: React.FC<{
         <Icon
           className={childClassName}
           onClick={() => {
+            if (social.url == null || social.url == '') {
+              return;
+            }
             window.open(social.url, '_blank');
           }}
         />
@@ -133,10 +129,14 @@ const HeroContent: React.FC<{ content: any }> = ({ content }) => {
         <button
           className={`${raleway.className} box-border border-sd-white hover:border-sd-purple hover:text-sd-purple hover:bg-transparent font-bold border-[1px] text-sd-black px-6 py-2 flex justify-center items-center rounded-full bg-sd-white`}
           onClick={() => {
+            if (content.resume.url == null || content.resume.url == '') {
+              alert('This is a demo project - no link embedded');
+              return;
+            }
             window.open(content.resume.url, '_blank');
           }}
         >
-          Resume
+          {content.resume.title}
         </button>
         <div
           className={`${raleway.className} relative box-border hover:border-sd-purple hover:text-sd-purple border-sd-white border-[1px] text-sd-white pl-10 pr-14 py-2 flex justify-center items-center rounded-full hover:cursor-pointer`}
@@ -147,7 +147,11 @@ const HeroContent: React.FC<{ content: any }> = ({ content }) => {
             setGithubHover(false);
           }}
           onClick={() => {
-            window.open('https://github.com/3dot14shreyansh', '_blank');
+            if (content.profile.url == null || content.profile.url == '') {
+              alert('This is a demo project - no link embedded');
+              return;
+            }
+            window.open(content.profile.url, '_blank');
           }}
         >
           {content.profile.title}

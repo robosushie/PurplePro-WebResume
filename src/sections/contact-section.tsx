@@ -8,15 +8,17 @@ const lato = Lato({ subsets: ['latin'], weight: '400' });
 import contact_config from '@/content/contact-section';
 import { InViewAnimateOnce } from '@/components/common/animations';
 
-const ContactForm: React.FC<{}> = () => {
+const ContactForm: React.FC<{ form: any }> = ({ form }) => {
+  const scriptURL = form.gsheet_script;
   useEffect(() => {
-    const scriptURL =
-      'https://script.google.com/macros/s/AKfycbzuC_INJKR4IIw2Vgb421foZVoiA2OlZL0RtT1rA6iSUjahuDWlRh21_ZFaFossvBAV/exec';
     const forms: any = document.forms;
     const form = forms['submit-to-google-sheet'];
-
     form.addEventListener('submit', (e: any) => {
       e.preventDefault();
+      if (scriptURL == null || scriptURL == '') {
+        alert('This is a demo project - form submission disabled');
+        return;
+      }
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then((response) => alert('Response Submission: Success!'))
         .catch((error) => alert('Response Submission: Failure!'));
@@ -116,7 +118,7 @@ const ContactSection: React.FC<{}> = () => {
             <ContactTitle />
             <ContactContent content={contact_config.content} />
           </div>
-          <ContactForm />
+          <ContactForm form={contact_config.form} />
         </div>
       </div>
     </div>

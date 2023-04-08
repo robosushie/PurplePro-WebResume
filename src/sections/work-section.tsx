@@ -23,12 +23,14 @@ const ExperienceRow_SM: React.FC<{ experience: any }> = ({ experience }) => {
           amount={0.3}
           className="relative w-full aspect-square bg-sd-white border-sd-white rounded-full border-4"
         >
-          <Image
-            src={experience.image}
-            alt={experience.title}
-            className="object-contain p-1"
-            fill
-          />
+          {experience.image && (
+            <Image
+              src={experience.image}
+              alt={experience.title}
+              className="object-contain p-2"
+              fill
+            />
+          )}
         </InViewAnimateOnce>
       </div>
       <InViewAnimateOnce
@@ -122,12 +124,14 @@ const ExperienceRow: React.FC<{
           amount={0.3}
           className="relative w-full aspect-square bg-sd-white border-sd-white rounded-full border-4"
         >
-          <Image
-            src={experience.image}
-            alt={experience.title}
-            className="object-contain p-1"
-            fill
-          />
+          {experience.image && (
+            <Image
+              src={experience.image}
+              alt={experience.title}
+              className="object-contain p-2"
+              fill
+            />
+          )}
         </InViewAnimateOnce>
       </div>
 
@@ -191,8 +195,8 @@ const SkillsCard: React.FC<{ title: string; Icon: any; description: any }> = ({
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.5 }}
-              transition={{ duration: 0.5 }}
-              className={`${raleway.className} flex flex-col absolute text-base w-[200%] sm:w-[150%] md:w-[300] lg:w-[400px] bottom-0 z-[100]`}
+              transition={{ duration: 0.2 }}
+              className={`${raleway.className} flex flex-col absolute text-base w-[200%] sm:w-[150%] md:w-[300] lg:w-[200px] bottom-2/3 z-[100]`}
             >
               <div
                 className={` w-full rounded-xl bg-sd-white text-sd-black px-4 pb-4 ${

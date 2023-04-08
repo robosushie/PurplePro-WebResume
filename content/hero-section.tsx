@@ -1,4 +1,4 @@
-import SHD from '@/assets/Shreyansh_Dubey.jpg';
+import Profile_Pic from '@/assets/ProfilePic.png';
 import Mountain_Cover from '@/assets/Mountain_Cover.jpg';
 
 import {
@@ -12,38 +12,39 @@ import { Email } from '@/components/common/icons';
 const hero_config = {
   cover: {
     image: Mountain_Cover,
-    description: 'Shreyansh Dubey | Data Analyst, Data Science'
+    description: 'Caleb Dev, AI Generated'
   },
   profile: {
-    image: SHD,
-    description: 'Shreyansh Dubey | Data Analyst, Data Science'
+    image: Profile_Pic,
+    description: 'Caleb Dev, AI Generated'
   },
   socials: [
-    { icon: Email, url: 'mailto:shreyanshd46@gmail.com', angle: 330 },
-    { icon: Github, url: 'https://github.com/3dot14shreyansh', angle: 10 },
+    { icon: Email, url: '', angle: 330 },
+    { icon: Github, url: '', angle: 10 },
     {
       icon: Linkedin,
-      url: 'https://www.linkedin.com/in/3dot14shreyansh/',
+      url: '',
       angle: 50
     },
     {
       icon: Instagram,
-      url: 'https://www.instagram.com/shreyanshdubey10/',
+      url: '',
       angle: 90
     }
   ],
   content: {
-    intro: ["Hi, I'm", 'Shreyansh'],
-    role: 'Data Analyst | Data Science Mentor',
+    intro: ["Hi, I'm", 'Caleb Dev'],
+    role: 'AI Generated Character | Freelancer',
     content:
-      'I believe life is one big game of perspective, so I strive to analyse data from as many angles as possible.',
+      'Minimalist techie, problem-solver, and globe-trotter. I believe in a simple life, working passionately, and exploring new places with my furry friends.',
     resume: {
-      url: 'https://drive.google.com/file/d/1TqHXIubwS0JvB1NwOqZuUzbbCLBlD8vc/view'
+      title: 'Resume',
+      url: ''
     },
     profile: {
       title: 'Github',
       icon: Github,
-      url: 'https://github.com/3dot14shreyansh'
+      url: ''
     }
   }
 };

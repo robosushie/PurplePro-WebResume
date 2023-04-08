@@ -9,7 +9,7 @@ const Logo: React.FC<{ className?: string; onClick?: () => void }> = ({
       <svg
         viewBox="0 0 369.23 381.86"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-[50px] sm:w-[60px] lg:w-[80px] aspect-square fill-white mx-5 sm:mx-5 lg:mx-10 my-2"
+        className="h-[50px] sm:h-[60px] lg:h-[80px] aspect-square fill-white"
       >
         <g>
           <polygon points="69.69 102.94 78.83 118.77 206.94 118.77 185.12 156.56 175.69 172.9 151.77 214.33 142.89 229.71 119.83 269.65 97.2 230.46 63.97 172.9 110.09 172.9 120.26 190.52 129.14 175.13 130.43 172.9 139.86 156.56 54.54 156.56 49.64 148.08 32.72 118.77 26.32 107.69 23.58 102.94 0 62.09 239.66 62.09 216.08 102.94 69.69 102.94" />

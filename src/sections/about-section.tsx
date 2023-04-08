@@ -127,7 +127,7 @@ const InterestsIcon: React.FC<{ Icon: any; details?: string }> = ({
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.2 }}
             className={`${ralewaylite.className} flex flex-col absolute w-[150px] bottom-[100%]`}
           >
             <div className=" w-full rounded bg-sd-white text-sd-black p-3">

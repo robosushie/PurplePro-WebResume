@@ -1,63 +1,63 @@
-import Adas from '@/assets/projects/adas.jpeg';
-import AmbitionBox from '@/assets/projects/ambitionbox.jpeg';
-import Covid19 from '@/assets/projects/covid19.jpg';
-import HeyCoffee from '@/assets/projects/heycoffee.png';
-import Message from '@/assets/projects/message.jpg';
-import Ngram from '@/assets/projects/ngram.jpg';
-import Whatsapp from '@/assets/projects/whatsapp.jpg';
+import ProjectPic1 from '@/assets/projects/ProjectPic1.jpg';
+import ProjectPic2 from '@/assets/projects/ProjectPic2.jpeg';
+import ProjectPic3 from '@/assets/projects/ProjectPic3.jpg';
 
 const project_config = {
   projects: [
     {
-      title: 'N-Gram Language Model',
-      description: 'N-Gram Language.',
-      image: Ngram,
-      github: 'https://github.com/3dot14shreyansh/N-Gram-Language-Model',
-      tags: ''
-    },
-    {
-      title: 'Message Classifier',
+      title: 'Sales Forecasting Dashboard',
       description:
-        'Implementation of message classifier which classifies messages to either spam or personal.',
-      image: Message,
-      github: 'https://github.com/3dot14shreyansh/message-classifier',
+        'Developed an interactive dashboard that provided clients with accurate sales forecasts based on historical data and trends.',
+      image: ProjectPic1,
+      github: '',
       tags: ''
     },
     {
-      title: 'Ambition Box',
-      description: 'Implementation of web scrapping using python.',
-      image: AmbitionBox,
-      github: 'https://github.com/3dot14shreyansh/Web-Scraping-Ambition-box-',
-      tags: ''
-    },
-    {
-      title: 'WhatsApp Chat Analyser',
+      title: 'Customer Segmentation Tool',
       description:
-        'Web based app to analyse WhatsApp chat between two indivduals or a group conversation.',
-      image: Whatsapp,
-      github: 'https://github.com/3dot14shreyansh/WhatsApp-chat-analyser-app',
+        'Created a customer segmentation tool that helped businesses better understand their target audience and improve marketing strategies.',
+      image: ProjectPic2,
+      github: '',
       tags: ''
     },
     {
-      title: 'Hey Coffee',
-      description: 'Voice Assistant App.',
-      image: HeyCoffee,
-      github: 'https://github.com/3dot14shreyansh/Hey-Coffee',
-      tags: ''
-    },
-    {
-      title: 'Covid 19 Analysis',
+      title: 'Workflow Automation System',
       description:
-        'Used Matplotlib and Seaborn library for holistic statewise analysis of Covid 19 pandemic.',
-      image: Covid19,
-      github: 'https://github.com/3dot14shreyansh/COVID19-EDA',
+        'Designed and implemented a workflow automation system that increased efficiency and reduced errors for a logistics company.',
+      image: ProjectPic3,
+      github: '',
       tags: ''
     },
     {
-      title: 'Autonomous Vehicle Program',
-      description: 'Currently Building !!',
-      image: Adas,
-      github: 'https://github.com/3dot14shreyansh/ADAS_Autonomus_vehicle',
+      title: 'Inventory Management Software',
+      description:
+        'Developed a custom inventory management software that optimized the supply chain and reduced costs for a retail client.',
+      image: ProjectPic1,
+      github: '',
+      tags: ''
+    },
+    {
+      title: 'Sentiment Analysis Tool',
+      description:
+        'Built a sentiment analysis tool that allowed businesses to analyze customer feedback and improve their products and services.',
+      image: ProjectPic2,
+      github: '',
+      tags: ''
+    },
+    {
+      title: 'Travel Planning App',
+      description:
+        'Created a mobile app that helped users plan their travels, discover new destinations, and connect with fellow travelers.',
+      image: ProjectPic3,
+      github: '',
+      tags: ''
+    },
+    {
+      title: 'E-commerce Platform',
+      description:
+        'Developed a user-friendly e-commerce platform that simplified online shopping and increased conversion rates for a small business.',
+      image: ProjectPic1,
+      github: '',
       tags: ''
     }
   ]

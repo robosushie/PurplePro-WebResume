@@ -169,9 +169,9 @@ const MenuIcon: React.FC<{}> = () => {
 
 const Navbar: React.FC<{}> = () => {
   return (
-    <div className="fixed w-full flex justify-between items-center z-[100] pr-8 lg:pr-16">
-      <Logo />
+    <div className="fixed w-full flex flex-row-reverse justify-between items-center z-[100] px-8 lg:px-16 py-6">
       <MenuIcon />
+      {/* <Logo /> */}
     </div>
   );
 };

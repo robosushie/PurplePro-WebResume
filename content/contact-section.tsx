@@ -1,11 +1,12 @@
 const contact_config = {
   content: [
-    "If you're on the hunt for anything related to data science, whether it's learning resources, tips for making a career change, or even project collaborations.",
-    'Even if your interests include dogs, plants, or hybrid automobiles ( or anything else under the sun! ).',
-    'I am happy to connect !!'
+    "As a data analyst and software developer, I've had the pleasure of working on numerous projects that have challenged my skills and expanded my horizons. My experience ranges from predictive analytics to custom software solutions.",
+    "If you're interested in discussing potential collaborations or simply learning more about my work, please feel free to reach out.",
+    'I am happy to connect !'
   ],
   form: {
-    email: 'shreyanshd46@gmail.com'
+    email: '',
+    gsheet_script: ''
   }
 };
 
